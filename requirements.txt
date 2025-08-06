@@ -1,0 +1,6 @@
+tensorflow
+nltk
+numpy
+scikit-learn
+matplotlib
+windows-curses

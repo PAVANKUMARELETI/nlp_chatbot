@@ -3,4 +3,5 @@ nltk
 numpy
 scikit-learn
 matplotlib
+streamlit
 windows-curses

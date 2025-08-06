@@ -1,12 +1,15 @@
-# NLP Healthcare Chatbot
+# NLP Healthcare Chatbot with Streamlit
 
-A simple, terminal-based chatbot built with Python, NLTK, and TensorFlow/Keras. This chatbot is designed to act as a basic healthcare assistant, capable of understanding user queries and providing relevant information based on a predefined set of intents.
+A user-friendly, web-based chatbot built with Python, Streamlit, NLTK, and TensorFlow/Keras. This chatbot acts as a basic healthcare assistant, capable of understanding user queries and providing relevant information in a clean, interactive interface.
+
+![Chatbot Screenshot](screenshot.png)
+*(Note: You will need to upload your screenshot to a service like Imgur and replace the URL above.)*
 
 ## 🌟 Features
 
+- **Modern Web Interface**: Built with Streamlit for a responsive and intuitive user experience.
 - **Natural Language Understanding**: Uses NLTK for tokenization, lemmatization, and processing user input.
 - **Intent Recognition**: A deep learning model built with TensorFlow/Keras classifies user intent.
-- **Interactive Terminal UI**: A clean, text-based user interface created with the `curses` library.
 - **Extensible Knowledge Base**: Easily add new skills and responses by editing the `intents.json` file.
 
 ---
@@ -14,11 +17,10 @@ A simple, terminal-based chatbot built with Python, NLTK, and TensorFlow/Keras. 
 ## 🛠️ Technologies Used
 
 - **Python**
+- **Streamlit**: For the web application interface.
 - **TensorFlow / Keras**: For building and training the neural network.
 - **NLTK (Natural Language Toolkit)**: For all natural language processing tasks.
 - **NumPy**: For numerical operations and handling training data.
-- **Scikit-learn**: For splitting data.
-- **Curses (`windows-curses`)**: For the command-line interface.
 
 ---
 
@@ -47,15 +49,13 @@ python -m venv venv
 # Activate it (macOS/Linux)
 source venv/bin/activate
 4. Install DependenciesInstall all the required packages using the requirements.txt file.pip install -r requirements.txt
-Note: The requirements.txt file should also include windows-curses for Windows users.5. Train the ModelBefore you can run the chatbot, you must first train the neural network. This will process the intents.json file and create a trained_model.keras file.python train.py
-This process may take a few minutes to complete.▶️ How to RunOnce the model is trained, you can start the chatbot with the following command:python main.py
-You can then type your questions into the terminal and press Enter to get a response from the bot. To exit the application, press Ctrl + C.📂 Project Structure.
+5. Train the ModelBefore you can run the chatbot, you must first train the neural network. This will process the intents.json file and create a trained_model.keras file.python train.py
+▶️ How to RunOnce the model is trained, start the Streamlit application with the following command:streamlit run app.py
+A new tab will open in your browser with the chatbot interface.📂 Project Structure.
 ├── venv/
-├── chatbot.ipynb       # The original Jupyter Notebook for development
+├── app.py              # The main Streamlit application file
 ├── intents.json        # The knowledge base for the chatbot
-├── main.py             # Starts the application and runs the main loop
 ├── train.py            # Script to train the neural network model
-├── ui.py               # Handles the terminal user interface
 ├── requirements.txt    # Lists all project dependencies
 ├── .gitignore          # Specifies files for Git to ignore
 └── README.md           # You are here!
